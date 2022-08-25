@@ -1,0 +1,36 @@
+nav {
+  > ul {
+    margin: 0;
+    list-style: none;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    > a {
+      display: flex;
+      border: 1px solid var(--primary-green);
+      height: 116px;
+      width: 116px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--primary-color);
+      > li {
+        display: flex;
+        height: 110px;
+        width: 110px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid var(--primary-green);
+      }
+      &.active,
+      &:hover {
+        color: var(--secondary-color);
+        background: rgba($color: var(--primary-green-rgb), $alpha: 0.3);
+      }
+    }
+  }
+}

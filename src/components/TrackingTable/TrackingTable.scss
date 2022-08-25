@@ -1,0 +1,35 @@
+.tracking-table-container {
+  > .tracking-company-table-container {
+    > table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      & td:first-child,
+      & td:last-child {
+        width: 15%;
+      }
+      & td:nth-child(3),
+      & td:nth-child(4) {
+        width: 10%;
+      }
+      & th {
+        border: 1px solid red;
+      }
+      & > thead {
+        position: sticky;
+        top: 0;
+        background-color: var(--background-primary-color);
+      }
+      & > tbody {
+        > tr:nth-child(2n + 1) {
+          background-color: var(--background-secondary-color);
+        }
+      }
+    }
+  }
+}
+.tracking-table-paging {
+  color: red;
+  background-color: yellow;
+  margin-top: auto;
+}

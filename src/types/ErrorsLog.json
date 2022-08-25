@@ -1,0 +1,339 @@
+{
+  "reportErrors": [
+    {
+      "status": 10,
+      "title": "none",
+      "titleEn": "none",
+      "description": "none",
+      "descriptionEn": "none",
+      "links": [],
+      "buttons": []
+    },
+    {
+      "status": 15,
+      "title": "פרטי כניסה שגויים",
+      "titleEn": "Incorrect Login Information",
+      "description": "המערכת לא הצליחה להתחבר לפורטל החברה ולכן לא ירדו נתונים, יש לעדכן הרשאה במערכת החברה, בפרופיל האישי ולאחר מכן לבצע הורדה נוספת",
+      "descriptionEn": "The system was unable to connect to the company site and therefore no data was downloaded, credentials must be updated in the company system, in the personal profile and then make another download",
+      "links": [
+        {
+          "to": "site",
+          "text": "פורטל החברה",
+          "textEn": "Company Site"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "UpdateCredentials",
+          "text": "עדכון פרטי כניסה",
+          "textEn": "Update Login Information"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 17,
+      "title": "פרטי כניסה לכספת שגויים",
+      "titleEn": "Incorrect Vault Login Information",
+      "description": "המערכת לא הצליחה להתחבר לכספת החברה ולכן לא ירדו נתונים, יש לעדכן הרשאה במערכת החברה, בפרופיל האישי ולאחר מכן לבצע הורדה נוספת",
+      "descriptionEn": "The system was unable to connect to the company site using vault credentials and therefore no data was downloaded, vault credentials must be updated in the company system, in the personal profile and then make another download",
+      "links": [
+        {
+          "to": "site",
+          "text": "פורטל החברה",
+          "textEn": "Company Site"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "UpdateVaultCredentials",
+          "text": "עדכון פרטי כניסה",
+          "textEn": "Update Vault Login Information"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 18,
+      "title": "ההורדה בוטלה",
+      "titleEn": "Download canceled",
+      "description": "בוטלה הורדת הנתונים בחברה",
+      "descriptionEn": "The company's data download was canceled",
+      "links": [],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 19,
+      "title": "דף לא צפוי",
+      "titleEn": "Unexpected Page",
+      "description": "המערכת זיהתה דף לא צפוי, יש להתחבר לפורטל החברה ולהתייחס לכתוב בעמוד",
+      "descriptionEn": "The system has detected an unexpected page, you must connect to the company site and refer to the post on the page",
+      "links": [
+        {
+          "to": "support",
+          "text": "שלח פנייה לתמיכה הטכנית",
+          "textEn": "Contact Technical Support"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 20,
+      "title": "קובץ לא ירד",
+      "titleEn": "File was not downloaded",
+      "description": "הדוח לא ירד בשל תקלה טכנית באתר חברת הביטוח, אנא נסית שנית מאוחר יותר או פנה לתמיכה הטכנית",
+      "descriptionEn": "The report was not downloaded to a technical fail on the insurance company's website, please try again later or contact technical support",
+      "links": [
+        {
+          "to": "support",
+          "text": "שלח פנייה לתמיכה הטכנית",
+          "textEn": "Contact Technical Support"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 25,
+      "title": "אין גישה לקובץ",
+      "titleEn": "No file access",
+      "description": "אין למשתמש שהוזן הרשאה לדוח זה, אנא פנה לחברת הביטוח על מנת לטפל בכך",
+      "descriptionEn": "The user who entered this report does not have access, please contact the insurance company to handle it",
+      "links": [
+        {
+          "to": "support",
+          "text": "שלח פנייה לתמיכה הטכנית",
+          "textEn": "Contact Technical Support"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 30,
+      "title": "שגיאת הורדה",
+      "titleEn": "Unknown Scan Error",
+      "description": "הדוח לא ירד בשל תקלה טכנית, אנא נסה שנית או פנה לתמיכה הטכנית",
+      "descriptionEn": "The report was not downloaded to a technical fail on the insurance company's website, please try again later or contact technical support",
+      "links": [
+        {
+          "to": "support",
+          "text": "שלח פנייה לתמיכה הטכנית",
+          "textEn": "Contact Technical Support"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 50,
+      "title": "ההורדה בוצעה בהצלחה",
+      "titleEn": "Downloaded Successfully",
+      "description": "הורד בהצלחה, עבור לחברה הבאה",
+      "descriptionEn": "Downloaded successfully, proceed to the next company",
+      "links": [],
+      "buttons": [
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 55,
+      "title": "קובץ לא ירד",
+      "titleEn": "Filed to Save",
+      "description": "שמירת הקובץ נכשלה, אנא נסה שנית. אם הבעיה חוזרת אנא פנה לתמיכה הטכנית",
+      "descriptionEn": "Failed to save file, please try again. If the problem persists please contact technical support",
+      "links": [
+        {
+          "to": "support",
+          "text": "שלח פנייה לתמיכה הטכנית",
+          "textEn": "Contact Technical Support"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 57,
+      "title": "הדוח שירד תקול",
+      "titleEn": "Downloaded File is Corrupted",
+      "description": "הדוח שירד מפורטל החברה אינו תקין. אנא נסה שנית ואם הבעיה חוזרת אנא פנה לתמיכה הטכנית",
+      "descriptionEn": "The downloaded report from the company portal is corrupted. Please try again and if the problem persists please contact technical support",
+      "links": [
+        {
+          "to": "support",
+          "text": "שלח פנייה לתמיכה הטכנית",
+          "textEn": "Contact Technical Support"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 60,
+      "title": "קובץ לא נמצא",
+      "titleEn": "No Data",
+      "description": "הדוח עוד לא הופק או שאין למשתמש שהוזן הרשאה לדוח זה, אנא פנה לחברת הביטוח על מנת לטפל בכך",
+      "descriptionEn": "The report has not yet been generated or the user entered has no authorization for this report, please contact the insurance company to handle it",
+      "links": [
+        {
+          "to": "site",
+          "text": "פורטל החברה",
+          "textEn": "Company Site"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 61,
+      "title": "ירד דוח ריק",
+      "titleEn": "Downloaded Report is Empty",
+      "description": "הדוח שירד הינו ריק מנתונים, אנא פנה לחברת הביטוח בכדי לבדוק האם זה תקין.",
+      "descriptionEn": "The downloaded report is empty, please contact the insurance company to check if it is correct.",
+      "links": [],
+      "buttons": [
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 65,
+      "title": "דוח לא זמין בחברה",
+      "titleEn": "Report not Found",
+      "description": "הדוח אינו זמין כעת בפורטל חברת הביטוח. אנא פנה לחברת הביטוח לבדוק מתי יהיה זמין - וכשיהיה נסה שנית.",
+      "descriptionEn": "The report is not currently available on the insurance company portal. Please contact the insurance company to check when it will be available - and when it will be try again.",
+      "links": [
+        {
+          "to": "site",
+          "text": "פורטל החברה",
+          "textEn": "Company Site"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    },
+    {
+      "status": 70,
+      "title": "ירדו נתוני חודש שגוי",
+      "titleEn": "Incorrect Month Report Downloaded",
+      "description": "הנתונים שיורדו הם נתונים מחודש קודם. אנא נסה שנית להוריד ואם הבעיה חוזרת אנא פנה לתמיכה הטכנית.",
+      "descriptionEn": "The data downloaded is data from a previous month. Please try downloading again and if the problem persists please contact technical support",
+      "links": [
+        {
+          "to": "support",
+          "text": "שלח פנייה לתמיכה הטכנית",
+          "textEn": "Contact Technical Support"
+        }
+      ],
+      "buttons": [
+        {
+          "action": "Retry",
+          "text": "נסה שנית",
+          "textEn": "Try again"
+        },
+        {
+          "action": "OK",
+          "text": "אישור",
+          "textEn": "OK"
+        }
+      ]
+    }
+  ]
+}

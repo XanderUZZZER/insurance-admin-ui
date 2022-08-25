@@ -1,0 +1,27 @@
+.main-wrapper {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content auto;
+  grid-template-areas:
+    '. header'
+    'sidebar main';
+  height: 100vh;
+  > *:nth-child(1) {
+    grid-area: header;
+    border-inline-start: var(--primary-border);
+  }
+  > .navbar-wrapper {
+    grid-area: sidebar;
+    border-top: var(--primary-border);
+  }
+  > .content-wrapper {
+    grid-area: main;
+    border-top: var(--primary-border);
+    border-inline-start: var(--primary-border);
+    box-sizing: border-box;
+    border-bottom: 3px solid green;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,23 @@
+.downloads-tracking-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid yellow;
+  overflow: hidden;
+  > .downloads-tracking-controls {
+    background-color: red;
+    display: flex;
+    > .downloads-tracking-search {
+      flex: 1;
+    }
+  }
+  > .downloads-tracking-table-wrapper {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    > .tracking-table-container {
+      overflow: auto;
+    }
+  }
+}
