@@ -1,7 +1,11 @@
-import React from 'react'
+import './Input.scss'
 
 const Input = ({ type = 'text', placeholder }) => {
-  return <input type={type} placeholder={placeholder} />
+  return (
+    <div className='custom-input-container'>
+      <input type={type} placeholder={placeholder} />
+    </div>
+  )
 }
 
 export default Input

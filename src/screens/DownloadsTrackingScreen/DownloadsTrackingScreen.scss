@@ -7,8 +7,28 @@
   > .downloads-tracking-controls {
     background-color: red;
     display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    > .downloads-tracking-month {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      > input {
+        margin-top: auto;
+      }
+    }
     > .downloads-tracking-search {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    > .downloads-tracking-refresh {
+      height: 100%;
+      > button {
+        height: 100%;
+      }
     }
   }
   > .downloads-tracking-table-wrapper {

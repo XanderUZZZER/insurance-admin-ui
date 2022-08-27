@@ -1,0 +1,6 @@
+.custom-input-container {
+  display: flex;
+  > input {
+    flex: 1;
+  }
+}
