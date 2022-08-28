@@ -2,14 +2,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  border-bottom: 3px solid yellow;
   overflow: hidden;
   > .downloads-tracking-controls {
-    background-color: red;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 6px;
+    padding: 12px 6px;
     > .downloads-tracking-month {
       display: flex;
       flex-direction: column;

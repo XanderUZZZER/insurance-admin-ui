@@ -1,0 +1,7 @@
+.custom-input-search-container {
+  display: flex;
+  gap: 6px;
+  > .custom-input-container {
+    flex: 1;
+  }
+}

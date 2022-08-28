@@ -1,5 +1,8 @@
 .tracking-table-container {
   > .tracking-company-table-container {
+    &:last-child {
+      border-bottom: 1px solid var(--primary-green);
+    }
     > table {
       width: 100%;
       border-collapse: separate;

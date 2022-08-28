@@ -1,4 +1,4 @@
-import BaseScreen from '../BaseScreen/BaseScreen'
+import BaseScreen from '../../Containers/BaseScreen/BaseScreen'
 import './ChatbotScreen.scss'
 
 const ChatbotScreen = () => {

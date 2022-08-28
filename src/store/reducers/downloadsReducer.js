@@ -1,6 +1,6 @@
-import { COMPANIES_FAIL, COMPANIES_LOADING, COMPANIES_SUCCESS } from '../actionTypes'
+import { COMPANIES_AGENCY, COMPANIES_FAIL, COMPANIES_LOADING, COMPANIES_PHONE, COMPANIES_SUCCESS } from '../actionTypes'
 
-const initialState = { companies: [], companiesLoading: true }
+const initialState = { companies: [], companiesLoading: false, agencyNumber: '', phoneNumber: '' }
 export const downloadsReducer = (state = initialState, action) => {
   const { type, payload } = action
   switch (type) {
@@ -21,6 +21,16 @@ export const downloadsReducer = (state = initialState, action) => {
         ...state,
         companiesLoading: false,
         companiesError: payload,
+      }
+    case COMPANIES_AGENCY:
+      return {
+        ...state,
+        agencyNumber: payload,
+      }
+    case COMPANIES_PHONE:
+      return {
+        ...state,
+        phoneNumber: payload,
       }
     default:
       return state

@@ -30,6 +30,7 @@ nav {
       &:hover {
         color: var(--secondary-color);
         background: rgba($color: var(--primary-green-rgb), $alpha: 0.3);
+        font-weight: 500;
       }
     }
   }

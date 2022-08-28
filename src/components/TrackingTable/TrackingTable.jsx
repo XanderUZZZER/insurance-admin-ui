@@ -1,17 +1,11 @@
-import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getCompanies } from '../../store/actions/downloadsActions'
+import { useSelector } from 'react-redux'
 import { insuranceField } from '../../types/insuranceField'
 import { reportRecordStatus } from '../../types/reportRecordStatus'
 import './TrackingTable.scss'
 
 const TrackingTable = () => {
-  const dispatch = useDispatch()
   const { companies, companiesLoading } = useSelector(state => state.downloads)
-
-  useEffect(() => {
-    dispatch(getCompanies())
-  }, [dispatch])
+  const pages = 0
 
   if (companiesLoading) {
     return <div>Loading...</div>
@@ -49,7 +43,7 @@ const TrackingTable = () => {
           </div>
         ))}
       </div>
-      <div className='tracking-table-paging'>Pages</div>
+      {pages > 0 && <div className='tracking-table-paging'>Pages</div>}
     </>
   )
 }
