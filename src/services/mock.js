@@ -16,15 +16,39 @@ export const buildCompanies = companiesCount => {
 }
 
 const buildReports = count => {
-  const fields = Object.values(insuranceFieldType)
-  const statuses = Object.values(reportRecordStatusType)
-  const reports = [...Array(count)].map((_, i) => {
-    return {
-      id: i + 1,
-      name: `report ${i + 1}`,
-      field: fields[getRandomInt(0, fields.length - 1)],
-      status: statuses[getRandomInt(0, statuses.length - 1)],
-    }
-  })
+  const reports = [...Array(count)].map((_, i) => ({
+    id: i + 1,
+    name: `report ${i + 1}`,
+    field: buildField(),
+    status: buildDownloadStatus(),
+  }))
   return reports
+}
+
+export const buildUser = () => {
+  return {
+    name: `User Name ${getRandomInt()}`,
+    reports: buildReports(getRandomInt(1, 6)).map((r, i) => ({
+      ...r,
+      downloadAllowed: !!getRandomInt(0, 1),
+      company: `Company ${i + 1}`,
+      number: r.id,
+      successCount: getRandomInt(0, 10),
+      scanErrCount: getRandomInt(0, 10),
+      reportErrCount: getRandomInt(0, 10),
+      notDownloadedCount: getRandomInt(0, 10),
+    })),
+    agenciesDownloadsCount: getRandomInt(0, 10),
+    agenciesPendingCount: getRandomInt(0, 10),
+  }
+}
+
+const buildField = () => getRandomValue(insuranceFieldType)
+
+const buildDownloadStatus = () => getRandomValue(reportRecordStatusType)
+
+const getRandomValue = obj => {
+  const values = Object.values(obj)
+  const value = values[getRandomInt(0, values.length - 1)]
+  return value
 }

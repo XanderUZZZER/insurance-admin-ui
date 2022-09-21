@@ -13,3 +13,7 @@ export const getRandomInt = (min = 1, max = 100) => {
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
+
+export const percentage = (partialValue, totalValue) => {
+  return (100 * partialValue) / totalValue
+}

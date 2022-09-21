@@ -4,7 +4,7 @@ import './Navbar.scss'
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='navbar-main'>
       <ul>
         {routes.map(item => (
           <NavLink to={item.route} key={item.route + item.text}>

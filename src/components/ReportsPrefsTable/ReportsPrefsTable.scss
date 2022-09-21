@@ -1,0 +1,50 @@
+.reports-prefs-table-container {
+  overflow: auto;
+  &:last-child {
+    border-bottom: 1px solid var(--primary-green);
+  }
+  > table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    td {
+      width: 50%;
+      text-align: center;
+    }
+    & th {
+      border: 1px solid var(--primary-green);
+      border-inline-start: none;
+      text-align: start;
+      background: rgba(var(--primary-green-rgb), 0.3);
+      &:first-child {
+        border-inline-start: 1px solid var(--primary-green);
+      }
+    }
+    & > thead {
+      position: sticky;
+      top: 0;
+      background-color: var(--background-primary-color);
+    }
+    & > tbody {
+      > tr {
+        height: 32px;
+        > td:first-child {
+          border-inline-end: 1px solid var(--primary-green);
+        }
+        &:nth-child(2n + 1) {
+          background-color: var(--background-primary-color);
+        }
+      }
+    }
+    & th,
+    & td {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+}
+.reports-prefs-table-paging {
+  color: red;
+  background-color: yellow;
+  margin-top: auto;
+}
