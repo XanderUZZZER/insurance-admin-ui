@@ -2,11 +2,13 @@ import ScreenWithNavbar from '../Containers/ScreenWithNavbar/ScreenWithNavbar'
 import ChatbotScreen from '../screens/ChatbotScreen/ChatbotScreen'
 import DownloadsManagementScreen from '../screens/DownloadsManagementScreen/DownloadsManagementScreen'
 import DownloadsTrackingScreen from '../screens/DownloadsTrackingScreen/DownloadsTrackingScreen'
+import NotificationsScreen from '../screens/NotificationsScreen/NotificationsScreen'
 
 export const baseRoute = '/'
 export const downloadsTrackingRoute = `${baseRoute}downloads-tracking`
 export const downloadsManagementRoute = `${baseRoute}downloads-management`
-export const chatbotRoute = `${baseRoute}chatbot`
+export const notificationsRoute = `${baseRoute}notifications`
+// export const chatbotRoute = `${baseRoute}chatbot`
 
 export const routes = [
   {
@@ -28,12 +30,21 @@ export const routes = [
     ),
   },
   {
-    text: 'Chatbot',
-    route: chatbotRoute,
+    text: 'Notifications & Pop-ups',
+    route: notificationsRoute,
     element: (
       <ScreenWithNavbar>
-        <ChatbotScreen />
+        <NotificationsScreen />
       </ScreenWithNavbar>
     ),
   },
+  // {
+  //   text: 'Chatbot',
+  //   route: chatbotRoute,
+  //   element: (
+  //     <ScreenWithNavbar>
+  //       <ChatbotScreen />
+  //     </ScreenWithNavbar>
+  //   ),
+  // },
 ]

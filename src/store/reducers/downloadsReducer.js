@@ -7,6 +7,13 @@ import {
   PREF_UPDATE_FAIL,
   PREF_UPDATE_LOADING,
   PREF_UPDATE_SUCCESS,
+  SELECT_ALL_USERS,
+  SELECT_COMPANIES,
+  SELECT_USER,
+  SELECT_USERS,
+  USERS_FAIL,
+  USERS_LOADING,
+  USERS_SUCCESS,
   USER_FAIL,
   USER_LOADING,
   USER_SUCCESS,
@@ -21,6 +28,10 @@ const initialState = {
   userLoading: false,
   updateReportSucces: false,
   updateReportLoading: false,
+  users: [],
+  usersLoading: false,
+  selectedUsers: [],
+  selectedCompanies: [],
 }
 export const downloadsReducer = (state = initialState, action) => {
   const { type, payload } = action
@@ -93,6 +104,58 @@ export const downloadsReducer = (state = initialState, action) => {
         updateReportSucces: false,
         updateReportError: payload,
         updateReportId: null,
+      }
+    case USERS_LOADING:
+      return {
+        ...state,
+        usersLoading: true,
+        users: [],
+        usersError: null,
+      }
+    case USERS_SUCCESS:
+      return {
+        ...state,
+        usersLoading: false,
+        users: payload,
+        usersError: null,
+        selectedUsers: payload.map(u => u.id),
+      }
+    case USERS_FAIL:
+      return {
+        ...state,
+        usersLoading: false,
+        usersError: payload,
+      }
+    case SELECT_USER:
+      return {
+        ...state,
+        selectedUsers: state.selectedUsers.includes(payload)
+          ? state.selectedUsers.filter(u => u !== payload)
+          : [...state.selectedUsers, payload],
+      }
+    case SELECT_USERS:
+      return {
+        ...state,
+        selectedUsers: payload,
+      }
+    case SELECT_ALL_USERS:
+      const filterApplied = state.selectedCompanies.length > 0
+      const filteredUsers = filterApplied
+        ? state.users
+            .filter(u => u.companies.map(c => c.id).some(c => state.selectedCompanies.includes(c)))
+            .map(u => u.id)
+        : state.users.map(u => u.id)
+      return {
+        ...state,
+        selectedUsers: state.selectedUsers.length === filteredUsers.length ? [] : filteredUsers,
+      }
+    case SELECT_COMPANIES:
+      return {
+        ...state,
+        selectedCompanies: state.selectedCompanies.includes(payload)
+          ? state.selectedCompanies.filter(c => c !== payload)
+          : [...state.selectedCompanies, payload],
+        selectedUsers: [],
       }
     case COMPANIES_AGENCY:
       return {

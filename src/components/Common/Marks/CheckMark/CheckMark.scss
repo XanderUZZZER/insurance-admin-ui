@@ -1,0 +1,40 @@
+.check-mark {
+  position: relative;
+  display: inline-block;
+  &:after {
+    position: absolute;
+    inset-inline-start: 6px;
+    top: -14px;
+    content: '';
+    display: block;
+    width: 6px;
+    height: 14px;
+    border: solid var(--background-primary-color);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  &.small:after {
+    inset-inline-start: 6px;
+    top: -12px;
+    width: 4px;
+    height: 10px;
+    border-width: 0 1px 1px 0;
+  }
+  &.large:after {
+    inset-inline-start: 11px;
+    top: -22px;
+    width: 8px;
+    height: 18px;
+    border-width: 0 2px 2px 0;
+  }
+  &.xLarge:after {
+    inset-inline-start: 2px;
+    top: -35px;
+    width: 12px;
+    height: 30px;
+    border-width: 0 4px 4px 0;
+  }
+  &.green::after {
+    border-color: green;
+  }
+}

@@ -7,18 +7,20 @@ import {
   PREF_UPDATE_FAIL,
   PREF_UPDATE_LOADING,
   PREF_UPDATE_SUCCESS,
+  USERS_FAIL,
+  USERS_LOADING,
+  USERS_SUCCESS,
   USER_FAIL,
   USER_LOADING,
   USER_SUCCESS,
 } from '../actionTypes'
-import { getCompaniesRequest, getUserRequest } from '../../API/http'
+import { getCompaniesRequest, getUserRequest, getUsersRequest } from '../../API/http'
 import { delay } from '../../utils/delay'
 import { getRandomInt } from '../../utils/number'
 
-export const getCompanies = () => async (dispatch, getState) => {
+export const getCompanies = () => async dispatch => {
   dispatch({ type: COMPANIES_LOADING })
   try {
-    //const { agencyNumber, phoneNumber } = getState().downloads
     const data = await getCompaniesRequest()
     dispatch({
       type: COMPANIES_SUCCESS,
@@ -49,7 +51,6 @@ export const setPhone = phone => {
 export const searchUser = userName => async dispatch => {
   dispatch({ type: USER_LOADING })
   try {
-    //const { agencyNumber, phoneNumber } = getState().downloads
     const data = await getUserRequest()
     dispatch({
       type: USER_SUCCESS,
@@ -75,6 +76,22 @@ export const updateReportPref = (reportId, value) => async dispatch => {
   } catch (error) {
     dispatch({
       type: PREF_UPDATE_FAIL,
+      payload: error,
+    })
+  }
+}
+
+export const getUsers = () => async dispatch => {
+  dispatch({ type: USERS_LOADING })
+  try {
+    const data = await getUsersRequest()
+    dispatch({
+      type: USERS_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: USERS_FAIL,
       payload: error,
     })
   }

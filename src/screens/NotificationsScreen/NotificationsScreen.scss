@@ -1,0 +1,32 @@
+.notifications-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  > .notifications-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding-inline: 6px;
+    display: grid;
+    grid-template-columns: 1fr 70% 1fr;
+    > .notifications-controls-btn-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  > .users-table-wrapper {
+    flex: 1 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    > .users-table-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+    }
+  }
+}

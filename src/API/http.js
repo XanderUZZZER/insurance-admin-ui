@@ -1,4 +1,4 @@
-import { buildCompanies, buildUser } from '../services/mock'
+import { buildCompanies, buildUser, buildUsers } from '../services/mock'
 import { delay } from '../utils/delay'
 
 export const getCompaniesRequest = async () => {
@@ -11,4 +11,10 @@ export const getUserRequest = async () => {
   await delay()
   const user = buildUser()
   return user
+}
+
+export const getUsersRequest = async () => {
+  await delay()
+  const users = buildUsers()
+  return users
 }
