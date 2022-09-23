@@ -1,8 +1,7 @@
 import {
-  COMPANIES_AGENCY,
+  COMPANIES_CLEAR,
   COMPANIES_FAIL,
   COMPANIES_LOADING,
-  COMPANIES_PHONE,
   COMPANIES_SUCCESS,
   PREF_UPDATE_FAIL,
   PREF_UPDATE_LOADING,
@@ -22,8 +21,6 @@ import {
 const initialState = {
   companies: [],
   companiesLoading: false,
-  agencyNumber: '',
-  phoneNumber: '',
   user: null,
   userLoading: false,
   updateReportSucces: false,
@@ -53,6 +50,13 @@ export const downloadsReducer = (state = initialState, action) => {
         ...state,
         companiesLoading: false,
         companiesError: payload,
+      }
+    case COMPANIES_CLEAR:
+      return {
+        ...state,
+        companiesLoading: false,
+        companiesError: null,
+        companies: [],
       }
     case USER_LOADING:
       return {
@@ -156,16 +160,6 @@ export const downloadsReducer = (state = initialState, action) => {
           ? state.selectedCompanies.filter(c => c !== payload)
           : [...state.selectedCompanies, payload],
         selectedUsers: [],
-      }
-    case COMPANIES_AGENCY:
-      return {
-        ...state,
-        agencyNumber: payload,
-      }
-    case COMPANIES_PHONE:
-      return {
-        ...state,
-        phoneNumber: payload,
       }
     default:
       return state

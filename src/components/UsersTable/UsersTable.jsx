@@ -63,14 +63,12 @@ const UsersTable = () => {
               )
               .map(u => (
                 <tr key={u.id}>
-                  <td>
-                    {u.name} ' ' {u.companies.map(c => c.id.charAt(0)).join(',')}
-                  </td>
-                  <td>{formatAs.phone(u.phone)}</td>
+                  <td>{u.fullName}</td>
+                  <td>{formatAs.phone(u.phoneNumber)}</td>
                   <td>{u.agencyNumber}</td>
                   <td>{u.agencyName}</td>
                   <td>{u.mainAgent}</td>
-                  <td>{u.lastNotify.toLocaleString()}</td>
+                  <td>{new Date(u.latestNotification).toLocaleString()}</td>
                   <td>
                     <input
                       type='checkbox'

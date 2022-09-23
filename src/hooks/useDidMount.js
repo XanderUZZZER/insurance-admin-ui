@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react'
 
-export const useDidMount = () => {
-  const didMountRef = useRef(true)
+export default function useDidMount() {
+  const didMountRef = useRef(false)
   useEffect(() => {
-    didMountRef.current = false
+    didMountRef.current = true
   }, [])
   return didMountRef.current
 }

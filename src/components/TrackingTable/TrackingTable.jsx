@@ -8,7 +8,11 @@ const TrackingTable = () => {
   const pages = 0
 
   if (companiesLoading) {
-    return <div>Loading...</div>
+    return <div className='tracking-table-placeholder'>Loading...</div>
+  }
+
+  if (companies.length === 0) {
+    return <div className='tracking-table-placeholder'>{'\u26A0'} Nothing Found</div>
   }
 
   return (
@@ -33,9 +37,9 @@ const TrackingTable = () => {
                   <tr key={r.id}>
                     <td>{r.id}</td>
                     <td>{r.name}</td>
-                    <td>{insuranceField[r.field].nameEn}</td>
+                    <td>{insuranceField[r.field]?.nameEn}</td>
                     <td>{r.status}</td>
-                    <td>{reportRecordStatus[r.status].titleEn}</td>
+                    <td>{reportRecordStatus[r.status]?.titleEn}</td>
                   </tr>
                 ))}
               </tbody>

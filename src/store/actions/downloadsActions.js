@@ -1,9 +1,7 @@
 import {
-  COMPANIES_AGENCY,
-  COMPANIES_FAIL,
-  COMPANIES_LOADING,
-  COMPANIES_PHONE,
   COMPANIES_SUCCESS,
+  COMPANIES_LOADING,
+  COMPANIES_FAIL,
   PREF_UPDATE_FAIL,
   PREF_UPDATE_LOADING,
   PREF_UPDATE_SUCCESS,
@@ -18,10 +16,10 @@ import { getCompaniesRequest, getUserRequest, getUsersRequest } from '../../API/
 import { delay } from '../../utils/delay'
 import { getRandomInt } from '../../utils/number'
 
-export const getCompanies = () => async dispatch => {
+export const getCompanies = (agency, phoneNumber, month) => async dispatch => {
   dispatch({ type: COMPANIES_LOADING })
   try {
-    const data = await getCompaniesRequest()
+    const data = await getCompaniesRequest(agency, phoneNumber, month)
     dispatch({
       type: COMPANIES_SUCCESS,
       payload: data,
@@ -31,20 +29,6 @@ export const getCompanies = () => async dispatch => {
       type: COMPANIES_FAIL,
       payload: error,
     })
-  }
-}
-
-export const setAgency = agency => {
-  return {
-    type: COMPANIES_AGENCY,
-    payload: agency,
-  }
-}
-
-export const setPhone = phone => {
-  return {
-    type: COMPANIES_PHONE,
-    payload: phone,
   }
 }
 
